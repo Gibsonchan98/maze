@@ -1,0 +1,151 @@
+Mon Jan 20 12:26:43 PST 2020
+*** compiling with clang++ to create an executable called myprogram
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+creature.cpp:7:51: warning: unused parameter 'creature' [-Wunused-parameter]
+ostream& operator<<(ostream& out, const Creature& creature) {
+                                                  ^
+creature.cpp:14:35: warning: unused parameter 'maze' [-Wunused-parameter]
+bool Creature::atExit(const Maze& maze) const {
+                                  ^
+creature.cpp:18:30: warning: unused parameter 'maze' [-Wunused-parameter]
+string Creature::solve(Maze& maze) {
+                             ^
+creature.cpp:23:32: warning: unused parameter 'maze' [-Wunused-parameter]
+string Creature::goNorth(Maze& maze) {
+                               ^
+creature.cpp:27:31: warning: unused parameter 'maze' [-Wunused-parameter]
+string Creature::goWest(Maze& maze) {
+                              ^
+creature.cpp:31:31: warning: unused parameter 'maze' [-Wunused-parameter]
+string Creature::goEast(Maze& maze) {
+                              ^
+creature.cpp:35:32: warning: unused parameter 'maze' [-Wunused-parameter]
+string Creature::goSouth(Maze& maze) {
+                               ^
+In file included from creature.cpp:5:
+./creature.h:24:6: warning: private field 'row' is not used [-Wunused-private-field]
+        int row;
+            ^
+./creature.h:25:6: warning: private field 'col' is not used [-Wunused-private-field]
+        int col;
+            ^
+9 warnings generated.
+*** running clang-tidy using options from .clang-tidy
+LLVM (http://llvm.org/):
+  LLVM version 6.0.0
+  
+  Optimized build.
+  Default target: x86_64-pc-linux-gnu
+  Host CPU: sandybridge
+6495 warnings generated.
+13397 warnings generated.
+21415 warnings generated.
+/mnt/d/repos/jdelliot342/maze/creature.cpp:7:51: warning: parameter 'creature' is unused [misc-unused-parameters]
+ostream& operator<<(ostream& out, const Creature& creature) {
+                                                  ^~~~~~~~~
+                                                   /*creature*/
+/mnt/d/repos/jdelliot342/maze/creature.cpp:14:35: warning: parameter 'maze' is unused [misc-unused-parameters]
+bool Creature::atExit(const Maze& maze) const {
+                                  ^~~~~
+                                   /*maze*/
+/mnt/d/repos/jdelliot342/maze/creature.cpp:18:30: warning: parameter 'maze' is unused [misc-unused-parameters]
+string Creature::solve(Maze& maze) {
+                             ^~~~~
+                              /*maze*/
+/mnt/d/repos/jdelliot342/maze/creature.cpp:23:32: warning: parameter 'maze' is unused [misc-unused-parameters]
+string Creature::goNorth(Maze& maze) {
+                               ^~~~~
+                                /*maze*/
+/mnt/d/repos/jdelliot342/maze/creature.cpp:27:31: warning: parameter 'maze' is unused [misc-unused-parameters]
+string Creature::goWest(Maze& maze) {
+                              ^~~~~
+                               /*maze*/
+/mnt/d/repos/jdelliot342/maze/creature.cpp:31:31: warning: parameter 'maze' is unused [misc-unused-parameters]
+string Creature::goEast(Maze& maze) {
+                              ^~~~~
+                               /*maze*/
+/mnt/d/repos/jdelliot342/maze/creature.cpp:35:32: warning: parameter 'maze' is unused [misc-unused-parameters]
+string Creature::goSouth(Maze& maze) {
+                               ^~~~~
+                                /*maze*/
+/mnt/d/repos/jdelliot342/maze/creature.h:16:21: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string solve(Maze& maze);
+                           ^
+/mnt/d/repos/jdelliot342/maze/creature.h:18:23: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string goNorth(Maze& maze);
+                             ^
+/mnt/d/repos/jdelliot342/maze/creature.h:19:23: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string goSouth(Maze& maze);
+                             ^
+/mnt/d/repos/jdelliot342/maze/creature.h:20:22: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string goEast(Maze& maze);
+                            ^
+/mnt/d/repos/jdelliot342/maze/creature.h:21:22: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string goWest(Maze& maze);
+                            ^
+/mnt/d/repos/jdelliot342/maze/creature.h:16:21: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string solve(Maze& maze);
+                           ^
+/mnt/d/repos/jdelliot342/maze/creature.h:18:23: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string goNorth(Maze& maze);
+                             ^
+/mnt/d/repos/jdelliot342/maze/creature.h:19:23: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string goSouth(Maze& maze);
+                             ^
+/mnt/d/repos/jdelliot342/maze/creature.h:20:22: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string goEast(Maze& maze);
+                            ^
+/mnt/d/repos/jdelliot342/maze/creature.h:21:22: warning: non-const reference parameter 'maze', make it const or use a pointer [google-runtime-references]
+        string goWest(Maze& maze);
+                            ^
+/mnt/d/repos/jdelliot342/maze/main.cpp:5:1: warning: #includes are not sorted properly [llvm-include-order]
+#include <iostream>
+^        ~~~~~~~~~~
+/mnt/d/repos/jdelliot342/maze/main.cpp:10:10: warning: invalid case style for variable 'M' [readability-identifier-naming]
+    Maze M("maze.txt");
+         ^~
+         m
+/mnt/d/repos/jdelliot342/maze/main.cpp:12:14: warning: invalid case style for variable 'C' [readability-identifier-naming]
+    Creature C(4, 4);
+             ^~
+             c
+/mnt/d/repos/jdelliot342/maze/maze.cpp:5:1: warning: #includes are not sorted properly [llvm-include-order]
+#include <fstream>
+^        ~~~~~~~~~
+/mnt/d/repos/jdelliot342/maze/maze.cpp:13:11: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+                        out << maze.field[row][col];
+                               ^
+/mnt/d/repos/jdelliot342/maze/maze.cpp:28:1: warning: constructor does not initialize these fields: field, width, height, exitRow, exitColumn [cppcoreguidelines-pro-type-member-init]
+Maze::Maze(const string& fileName) {
+^
+/mnt/d/repos/jdelliot342/maze/maze.cpp:43:15: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+                        inFile.get(field[row][col]);
+                                   ^
+/mnt/d/repos/jdelliot342/maze/maze.cpp:61:9: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+        return field[row][col] == ' ';
+               ^
+/mnt/d/repos/jdelliot342/maze/maze.cpp:65:2: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+        field[row][col] = '*';
+        ^
+/mnt/d/repos/jdelliot342/maze/maze.cpp:69:2: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+        field[row][col] = '+';
+        ^
+Suppressed 21382 warnings (21382 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+*** running myprogram
+Path: 
+xxxxxxxxxxxxxxxxxx x
+x     x       xxxx x
+x xxxxx xxxxx   xx x
+x xxxxx xxxxxxx xx x
+x x          xx xx x
+x xxxxxxxxxx xx    x
+xxxxxxxxxxxxxxxxxxxx
+
+
+Done!
+*** cleaning up, deleting myprogram
+Mon Jan 20 12:26:53 PST 2020
