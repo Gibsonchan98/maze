@@ -9,8 +9,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(.)
 
 add_executable(maze
-		main.cpp
-		maze.cpp
-		maze.h
-		creature.cpp
-		creature.h)
+              main.cpp
+              maze.cpp
+              maze.h
+              creature.cpp
+              creature.h)

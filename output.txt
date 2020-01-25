@@ -1,4 +1,4 @@
-Mon Jan 20 12:26:43 PST 2020
+Mon Jan 20 16:51:23 PST 2020
 *** compiling with clang++ to create an executable called myprogram
 clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
 Target: x86_64-pc-linux-gnu
@@ -148,4 +148,4 @@ xxxxxxxxxxxxxxxxxxxx
 
 Done!
 *** cleaning up, deleting myprogram
-Mon Jan 20 12:26:53 PST 2020
+Mon Jan 20 16:51:35 PST 2020
