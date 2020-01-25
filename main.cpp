@@ -2,9 +2,9 @@
 // Created by XXX on YYY.
 //
 
-#include <iostream>
 #include "creature.h"
 #include "maze.h"
+#include <iostream>
 
 void test() {
     Maze M("maze.txt");

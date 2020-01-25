@@ -13,7 +13,7 @@ enum CELL { CLEAR, WALL, PATH, VISITED };
 class Maze {
     friend ostream& operator<<(ostream& out, const Maze& maze);
 
-public:
+  public:
     explicit Maze(const string& fileName);
     bool isClear(int row, int col) const;
     void markAsPath(int row, int col);
@@ -21,7 +21,7 @@ public:
     int getExitRow() const;
     int getExitColumn() const;
 
-private:
+  private:
     static const int MAX_SIZE = 100;
 
     char field[MAX_SIZE][MAX_SIZE];

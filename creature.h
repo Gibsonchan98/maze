@@ -8,10 +8,10 @@
 #include <ostream>
 
 class Creature {
-public:
+  public:
     friend ostream& operator<<(ostream& out, const Creature& creature);
 
-public:
+  public:
     Creature(int row, int col);
     string solve(Maze& maze);
     bool atExit(const Maze& maze) const;
@@ -20,7 +20,7 @@ public:
     string goEast(Maze& maze);
     string goWest(Maze& maze);
 
-private:
+  private:
     int row;
     int col;
 };

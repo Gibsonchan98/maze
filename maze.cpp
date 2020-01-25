@@ -2,10 +2,10 @@
 // Created by XXX on YYY.
 //
 
+#include "maze.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>
-#include "maze.h"
 
 ostream& operator<<(ostream& out, const Maze& maze) {
     for (int row = 0; row < maze.height; row++) {
@@ -46,25 +46,14 @@ Maze::Maze(const string& fileName) {
 
         getline(inFile, str);
     }
-
 }
 
-int Maze::getExitRow() const {
-    return exitRow;
-}
+int Maze::getExitRow() const { return exitRow; }
 
-int Maze::getExitColumn() const {
-    return exitColumn;
-}
+int Maze::getExitColumn() const { return exitColumn; }
 
-bool Maze::isClear(int row, int col) const {
-    return field[row][col] == ' ';
-}
+bool Maze::isClear(int row, int col) const { return field[row][col] == ' '; }
 
-void Maze::markAsPath(int row, int col) {
-    field[row][col] = '*';
-}
+void Maze::markAsPath(int row, int col) { field[row][col] = '*'; }
 
-void Maze::markAsVisited(int row, int col) {
-    field[row][col] = '+';
-}
+void Maze::markAsVisited(int row, int col) { field[row][col] = '+'; }
