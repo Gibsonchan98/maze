@@ -21,11 +21,11 @@ ostream& operator<<(ostream& out, const Maze& maze) {
     return out;
 }
 
-// For Clion, need the following line in CMakeLists.txt so maze.txt is found
+// For CLion, need the following line in CMakeLists.txt so maze.txt is found
 // at the same location as the cpp files
 // # need to load data files from current directory as cpp files
 // set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
-Maze::Maze(const string& fileName) {
+Maze::Maze(const string& fileName) : field{{0}}, width{0}, height{0}, exitRow{0}, exitColumn{0} {
     ifstream inFile;
     inFile.open(fileName);
     if (!inFile) {
@@ -41,7 +41,7 @@ Maze::Maze(const string& fileName) {
     for (int row = 0; row < height; ++row) {
         for (int col = 0; col < width; ++col) {
             inFile.get(field[row][col]);
-            // cout << Row << ", " << col << ": " << field[Row][col] << endl;
+            // cout << row << ", " << col << ": " << field[row][col] << endl;
         }
 
         getline(inFile, str);

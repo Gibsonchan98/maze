@@ -66,6 +66,8 @@ Perform all check except the following:
 
 - fuchsia-* do not need specific checks for "fuchsia" a modular, capability-based operating system
 - cppcoreguidelines-pro-bounds-array-to-pointer-decay: do not give warnings on assert
+- cppcoreguidelines-pro-bounds-constant-array-index: enable using non constant array subscript indicies
+- google-runtime-references: enable passing non-const references
 - google-build-using-namespace: for simplicity allow `using namespace std;`
 - google-readability-braces-around-statements: allow compact code without `{`
 - readability-braces-around-statements: allow compact code without `{` This option is not available in CSS Linux lab under LLVM 3.8.1, but is needed on my PC when using 9.0.0

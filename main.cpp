@@ -7,11 +7,11 @@
 #include <iostream>
 
 void test() {
-    Maze M("maze.txt");
-    // cout << m << endl;
-    Creature C(4, 4);
-    cout << "Path: " << C.solve(M) << endl;
-    cout << M << endl;
+    Maze m("maze.txt");
+    cout << m << endl;
+    Creature c(4, 4);
+    cout << "Path: " << c.solve(m) << endl;
+    cout << m << endl;
 }
 
 int main() {
